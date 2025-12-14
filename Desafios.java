@@ -1,16 +1,28 @@
-
 package com.mycompany.desafios;
-import java.util.Scanner;
 
-//calcula a área do círculo com base no raio
-public class Desafios {
-    public static void main (String[] args){
-        Scanner teclado = new Scanner(System.in);
-        
+// Classe que representa um círculo
+public class Circulo {
+    private double raio;
+
+    // Construtor
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+
+    // Getter
+    public double getRaio() {
+        return raio;
+    }
+
+    // Setter
+    public void setRaio(double raio) {
+        this.raio = raio;
+    }
+
+    // Método para calcular área
+    public double calcularArea() {
         double pi = 3.14159;
-        double raio = teclado.nextDouble();
-        double area = pi*raio*raio;
-        
-        System.out.printf("A=%.4f\n", area);
+        return pi * raio * raio;
     }
 }
+
